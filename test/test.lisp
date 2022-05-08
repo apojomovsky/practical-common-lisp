@@ -1,3 +1,5 @@
+(in-package :apojomovsky.test)
+
 (defvar *test-name* nil)
 
 (defun report-result (result form)
