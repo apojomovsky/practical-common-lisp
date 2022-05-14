@@ -1,4 +1,4 @@
-(in-package :apojomovsky.macro-utilities)
+(in-package :com.gigamonkeys.macro-utilities)
 
 (defmacro with-gensyms ((&rest names) &body body)
   `(let ,(loop for n in names collect `(,n (make-symbol ,(string n))))
@@ -25,3 +25,4 @@
            :right-margin 83
            :case :downcase)
     nil))
+

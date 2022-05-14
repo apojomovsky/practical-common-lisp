@@ -1,11 +1,11 @@
-(defpackage :apojomovsky.test-system (:use :asdf :cl))
-(in-package :apojomovsky.test-system)
+(defpackage :com.gigamonkeys.test-system (:use :asdf :cl))
+(in-package :com.gigamonkeys.test-system)
 
 (defsystem test-framework
   :name "test-framework"
-  :author "Alexis Pojomovsky <apojomovsky@gmail.com>"
+  :author "Peter Seibel <peter@gigamonkeys.com>"
   :version "1.0"
-  :maintainer "Alexis Pojomovsky <apojomovsky@gmail.com>"
+  :maintainer "Peter Seibel <peter@gigamonkeys.com>"
   :licence "BSD"
   :description "Simple unit test framework for Common Lisp"
   :long-description ""

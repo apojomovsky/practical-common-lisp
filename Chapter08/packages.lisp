@@ -1,10 +1,11 @@
 (in-package :cl-user)
 
-(defpackage :apojomovsky.macro-utilities
+(defpackage :com.gigamonkeys.macro-utilities
   (:use :common-lisp)
-  (:export
+  (:export 
    :with-gensyms
    :with-gensymed-defuns
    :once-only
    :spliceable
    :ppme))
+           
