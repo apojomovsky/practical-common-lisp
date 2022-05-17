@@ -6,5 +6,6 @@
   :license  "BSD"
   :version "0.0.1"
   :serial t
+  :depends-on ("com.gigamonkeys.pathnames" "cl-ppcre")
   :components ((:file "package")
                (:file "spam")))
