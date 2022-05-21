@@ -9,10 +9,12 @@
 (defparameter *min-spam-score* .6)
 
 (defun classification (score)
-  (cond
-    ((<= score *max-ham-score*) 'ham)
-    ((>= score *min-spam-score*) 'spam)
-    (t 'unsure)))
+  (values
+   (cond
+     ((<= score *max-ham-score*) 'ham)
+     ((>= score *min-spam-score*) 'spam)
+     (t 'unsure))
+   score))
 
 (defclass word-feature ()
   ((word
@@ -111,7 +113,7 @@
 (defun fisher (probs number-of-probs)
   "The Fisher computation described by Robinson."
   (inverse-chi-square
-   (* -2 (log (reduce #'+ probs :key #'log)))
+   (* -2 (log (reduce #'* probs)))
    (* 2 number-of-probs)))
 
 (defun inverse-chi-square (value degrees-of-freedom)
